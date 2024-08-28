@@ -37,7 +37,7 @@ const BlogContainer = () => {
           )}
         </div>
         <div className=" row-span-1  lg:col-span-8 mb-10 ">
-          {blogs.length === 0 && <BlogContainerShimmer />}
+          {blogs?.length === 0 && <BlogContainerShimmer />}
           {searchedblogs?.length > 0
             ? searchedblogs?.map((eachblog) => (
                 <BlogPostContainer eachblog={eachblog} key={eachblog.id} />

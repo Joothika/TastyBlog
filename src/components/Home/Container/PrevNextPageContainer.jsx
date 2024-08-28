@@ -4,12 +4,9 @@ import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArro
 const PrevNextPageContainer = ({ setFromPage, setToPage, toPage }) => {
   const [pageNo, setPageNo] = useState(1);
   function handlePrevPage() {
-    // if (setFromPage >= 5) {
     setFromPage((prevPage) => prevPage - 5);
     setToPage((prevPage) => prevPage - 5);
     setPageNo((prevPageNo) => prevPageNo - 1);
-    console.log("prev page button clicked");
-    // }
   }
   function handleNextPage() {
     setFromPage(toPage + 1);

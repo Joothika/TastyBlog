@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { SavedContent, SavedImage } from "../../utils/Export";
 
 const EachSavedList = ({ content }) => {

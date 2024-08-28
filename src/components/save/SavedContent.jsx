@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 const SavedContent = ({ content }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  console.log(Object.keys(content?.price).length == 0);
   return (
     <div className="ml-4 w-full">
       <div className="flex justify-between">
@@ -26,7 +27,10 @@ const SavedContent = ({ content }) => {
       </div>
       <div className="mt-4 flex justify-between">
         <div className="md:flex">
-          {content?.price && (
+          {content?.price == null && ""}
+          {Object.keys(content?.price).length == 0 ? (
+            ""
+          ) : (
             <small className="flex items-center">
               <CalendarTodayIcon
                 sx={{ fontSize: { xs: "0.8rem", md: "1.5rem" } }}
@@ -62,7 +66,17 @@ const SavedContent = ({ content }) => {
           </button>
           <button
             className="md:mr-3"
-            onClick={() => dispatch(onRemoveSavedBlog(content))}
+            onClick={() => {
+              function removeSavedBlog() {
+                const savedArr = JSON.parse(localStorage.getItem("recipe"));
+                const removeRecipe = savedArr.findIndex(
+                  (eachRecipe) => eachRecipe.id == content.id
+                );
+                savedArr.splice(removeRecipe, 1);
+                return localStorage.setItem("recipe", JSON.stringify(savedArr));
+              }
+              removeSavedBlog();
+            }}
           >
             <RestoreFromTrashOutlinedIcon
               sx={{ fontSize: { xl: "1.7rem" }, color: "#cc0000 " }}

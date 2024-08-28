@@ -14,6 +14,9 @@ const saveSlice = createSlice({
         (blog) => blog.id !== actions.payload.id
       );
     },
+    recipeFromLocalStroage(state, actions) {
+      state.recipeFromLocalStroage = actions.payload;
+    },
   },
 });
 
