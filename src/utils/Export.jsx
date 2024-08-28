@@ -59,8 +59,6 @@ export { onShowSimilarList } from "../store/blogSlice";
 export { onShowRecipeDetail } from "../store/blogSlice";
 export { onShowSearchedBlogList } from "../store/blogSlice";
 export { onShowError } from "../store/blogSlice";
-export { onShowSavedList } from "../store/saveSlice";
-export { onRemoveSavedBlog } from "../store/saveSlice";
 
 /***  COMMON CONTAINER ****/
 export { BlogContainerShimmer } from "./BlogContainerShimmer";
