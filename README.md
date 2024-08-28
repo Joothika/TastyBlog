@@ -10,6 +10,10 @@
   <li>Bundler - Parcel</li>
 </ul>
 <h1>Demonstration</h1>
-https://github.com/user-attachments/assets/174f409c-d12b-4ed3-b091-da9996af3c64
+
+
+https://github.com/user-attachments/assets/3dddc9b5-092c-40c8-aecd-59507e9795c0
+
+
 <h1>Deployment Site</h1>
 Click hre to visit <a href="https://tasty-blog.netlify.app/">Tasty Blog</a>
